@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(PostVote::class);
     }
+
+    public function commentVotes(): hasMany
+    {
+        return $this->hasMany(CommentVote::class);
+    }
 }
