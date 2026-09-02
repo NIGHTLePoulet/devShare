@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('post_id')->constrained('posts');
             $table->tinyInteger('value');
             $table->timestamps();
+            $table->unique(['user_id', 'post_id']);
         });
     }
 

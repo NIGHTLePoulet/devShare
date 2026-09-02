@@ -22,7 +22,7 @@ class CommentVoteFactory extends Factory
         return [
             'comment_id' => Comment::factory(),
             'user_id' => User::factory(),
-            'value' => fake()->word(),
+            'value' => fake()->randomElement([-1, 1]),
             'created_at' => now(),
         ];
     }

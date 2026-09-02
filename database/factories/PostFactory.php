@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'user_id' => User::factory(),
             'title' => fake()->sentence(),
             'content' => fake()->text(),
-            'tags' => fake()->words(2),
+            'tags' => fake()->words(2, true),
             'created_at' => now(),
         ];
     }

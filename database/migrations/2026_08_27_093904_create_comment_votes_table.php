@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->tinyInteger('value');
             $table->timestamps();
+            $table->unique(['comment_id', 'user_id']);
         });
     }
 

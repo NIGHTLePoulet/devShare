@@ -23,7 +23,7 @@ class PostVoteFactory extends Factory
         return [
             'post_id' => Post::factory(),
             'user_id' => User::factory(),
-            'value' => fake()->word(),
+            'value' => fake()->randomElement([-1, 1]),
             'created_at' => now(),
         ];
     }
