@@ -22,17 +22,17 @@
 
                 <label class="flex flex-col">
                     <span class="mb-1">Username</span>
-                    <input type="text" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="JohnDoe"/>
+                    <input type="text" name="username" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="JohnDoe" required/>
                 </label>
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Email address</span>
-                    <input type="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com"/>
+                    <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com" required/>
                 </label>
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Password</span>
-                    <input type="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="••••••••"/>
+                    <input type="password" name="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="••••••••" required />
                     <p class="mt-1 text-xs text-muted-foreground">Must be at least 8 characters.</p>
                 </label>
 
