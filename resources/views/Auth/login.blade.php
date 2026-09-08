@@ -10,20 +10,15 @@
     <main class="flex justify-center text-sm">
         <div class="border border-border rounded-lg bg-white w-full max-w-105">
             <div class="flex">
-                <a href="/login" class="py-4 inline-block flex-1 text-center bg-background rounded-tl-lg border-b border-b-border">Login</a>
+                <a href="/login" class="py-4 inline-block flex-1 text-center rounded-tl-lg border-b-2 border-b-primary text-primary font-medium">Login</a>
                 <a href="/register"
-                   class="py-4 inline-block text-primary capitalize flex-1 text-center font-medium border-b-2 border-b-primary rounded-tr-lg">
+                   class="py-4 inline-block capitalize flex-1 text-center border-b border-b-border rounded-tr-lg bg-background">
                     Sign up
                 </a>
             </div>
 
-            <form method="POST" action="/register" class="flex flex-col p-12 gap-4">
+            <form method="POST" action="/login" class="flex flex-col p-12 gap-4">
                 @csrf
-
-                <label class="flex flex-col">
-                    <span class="mb-1">Username</span>
-                    <input type="text" name="username" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="JohnDoe" required/>
-                </label>
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Email address</span>
@@ -33,14 +28,12 @@
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Password</span>
                     <input type="password" name="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="••••••••" required />
-                    <p class="mt-1 text-xs text-muted-foreground">Must be at least 8 characters.</p>
                 </label>
 
                 <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
-                    Create account
-                    <img src="{{ asset('icons/register_icon.svg') }}" alt="Register icon" />
+                    Login
+                    <img src="{{ asset('icons/login_icon.svg') }}" alt="Login icon" />
                 </button>
-                <p class="text-center text-sm mt-4">By signing up, you agree to our <a href="#" class="hover:underline text-primary">Terms</a> and <br /> <a href="#" class="hover:underline text-primary">Privacy Policy</a>.</p>
             </form>
         </div>
     </main>
