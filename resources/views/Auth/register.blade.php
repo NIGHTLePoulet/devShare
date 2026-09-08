@@ -36,7 +36,7 @@
                     <p class="mt-1 text-xs text-muted-foreground">Must be at least 8 characters.</p>
                 </label>
 
-                <button class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
+                <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
                     Create account
                     <img src="{{ asset('icons/register_icon.svg') }}" alt="Register icon" />
                 </button>
