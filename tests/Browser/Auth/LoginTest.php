@@ -3,7 +3,7 @@
 use App\Models\User;
 
 it('user can log in', function () {
-    $user = User::factory()->create([
+    User::factory()->create([
         'username' => 'JohnDoe',
         'email' => 'johndoe@example.com',
         'password'=> 'password',

@@ -10,7 +10,7 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 
 Route::get('/login', [LoginController::class, 'create'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store')->middleware('guest');
-
+Route::delete('/logout', [LoginController::class, 'destroy'])->name('logout')->middleware('auth');
 
 Route::get('/', function () {
     return view('homepage');
