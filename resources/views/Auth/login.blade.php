@@ -18,7 +18,7 @@
             </div>
 
             <form method="POST" action="/login" class="flex flex-col p-12 gap-4">
-                @csrf
+               @csrf
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Email address</span>
