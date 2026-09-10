@@ -1,3 +1,4 @@
+@php use function Laravel\Prompts\password; @endphp
 <x-layout>
     <header class="w-full flex flex-col items-center mb-9">
         <div class="flex items-center gap-2 text-[32px]">
@@ -20,15 +21,35 @@
             <form method="POST" action="/login" class="flex flex-col p-12 gap-4">
                @csrf
 
+                @error('email')
+                    <div class="p-4 bg-danger-light/40 rounded-sm border border-danger/30">
+                        <div class="text-danger flex items-center gap-3 font-medium">
+                            <img src="{{ asset('icons/wrong_icon_1.svg') }}" alt="Error icon" />
+                            Authentication failed
+                        </div>
+                        <p class="text-foreground text-sm ml-7.25"> {{ $message }}</p>
+                    </div>
+                @enderror
+
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Email address</span>
-                    <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com" required/>
+                    <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com" value="{{ old('email') }}" required/>
                 </label>
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Password</span>
-                    <input type="password" name="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="••••••••" required />
+                    <input type="password"
+                           name="password"
+                           class="px-4 pt-3 pb-3.5 border border-border rounded-sm @error('password') border-2 border-danger @enderror"
+                           placeholder="••••••••"
+                           required />
                 </label>
+                @error('password')
+                    <div class="flex items-center gap-2 -mt-2">
+                        <img src="{{asset('icons/wrong_icon_2.svg')}}" alt="Wrong password icon" />
+                        <p class="text-danger text-xs">{{ $message }}</p>
+                    </div>
+                @enderror
 
                 <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
                     Login

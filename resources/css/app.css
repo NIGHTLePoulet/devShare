@@ -6,12 +6,15 @@
 @source '../../storage/framework/views/*.php';
 
 :root {
-    --background: rgb(250 248 255);
-    --border: rgb(194 198 214);
-    --primary: rgb(0 90 194);
-    --primary-dark: rgb(0 67 149);
-    --foreground: rgb(66 71 84);
-    --muted-foreground: rgb(111 119 142);
+    --background: #faf8ff;
+    --border: #c2c6d6;
+    --primary: #005ac2;
+    --primary-dark: #004395;
+    --foreground: #424754;
+    --muted-foreground: #6f778e;
+
+    --danger: #ba1a1a;
+    --danger-light: #FFDAD6;
 }
 
 @theme {
@@ -23,4 +26,7 @@
     --color-primary-dark: var(--primary-dark);
     --color-foreground: var(--foreground);
     --color-muted-foreground: var(--muted-foreground);
+
+    --color-danger: var(--danger);
+    --color-danger-light: var(--danger-light);
 }
