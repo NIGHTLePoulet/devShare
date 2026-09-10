@@ -20,3 +20,17 @@ it('user can log in', function () {
 
     $page->assertPathis('/');
 });
+
+it('user can log out', function () {
+    $user = User::factory()->create([
+        'username' => 'JohnDoe',
+        'email' => 'johndoe@example.com',
+        'password'=> 'password',
+    ]);
+
+    $this->actingAs($user)
+    ->delete(route('logout'))
+    ->assertRedirectToRoute('login');
+
+    $this->assertGuest();
+});
