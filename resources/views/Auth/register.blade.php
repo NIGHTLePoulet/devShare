@@ -22,19 +22,33 @@
 
                 <label class="flex flex-col">
                     <span class="mb-1">Username</span>
-                    <input type="text" name="username" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="JohnDoe" required/>
+                    <input type="text" name="username" class="px-4 pt-3 pb-3.5 border border-border rounded-sm @error('password') border-2 border-danger @enderror" value="{{old('username')}}" placeholder="JohnDoe" required/>
                 </label>
+
+                @error('username')
+                    <p class="text-danger text-xs -mt-2">{{$message}}</p>
+                @enderror
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Email address</span>
-                    <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com" required/>
+                    <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm @error('password') border-2 border-danger @enderror" value="{{old('email')}}" placeholder="dev@example.com" required/>
                 </label>
+
+                @error('email')
+                    <p class="text-danger text-xs -mt-2">{{ $message }}</p>
+                @enderror
 
                 <label class="flex flex-col mt-2">
                     <span class="mb-1">Password</span>
-                    <input type="password" name="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="••••••••" required />
-                    <p class="mt-1 text-xs text-muted-foreground">Must be at least 8 characters.</p>
+                    <input type="password" name="password" class="px-4 pt-3 pb-3.5 border border-border rounded-sm @error('password') border-2 border-danger @enderror" placeholder="••••••••" required />
                 </label>
+                @if(count($errors) === 0)
+                    <p class="-mt-2 text-xs text-muted-foreground">Must be at least 8 characters.</p>
+                @endif
+
+                @error('password')
+                    <p class="text-danger text-xs -mt-2"> {{ $message }}</p>
+                @enderror
 
                 <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
                     Create account
