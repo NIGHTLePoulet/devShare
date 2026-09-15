@@ -18,7 +18,7 @@ it('user can log in', function () {
 
     $this->assertAuthenticated();
 
-    $page->assertPathis('/');
+    $page->assertPathis('/posts');
 });
 
 it('user can log out', function () {

@@ -15,6 +15,6 @@ it('user can create an account', function () {
 
     $this->assertAuthenticated();
 
-    $page->assertPathIs('/');
+    $page->assertPathIs('/posts');
 
 });

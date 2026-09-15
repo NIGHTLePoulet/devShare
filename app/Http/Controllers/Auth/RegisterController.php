@@ -28,6 +28,6 @@ class RegisterController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('homepage');
+        return redirect()->route('posts.index');
     }
 }

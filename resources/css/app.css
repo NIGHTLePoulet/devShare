@@ -1,32 +1,54 @@
 @import 'tailwindcss';
 
 @import '@fontsource-variable/inter';
+@import '@fontsource-variable/geist/wght.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 :root {
     --background: #faf8ff;
+    --background-secondary: #FFFFFF;
     --border: #c2c6d6;
+
     --primary: #005ac2;
     --primary-dark: #004395;
+
     --foreground: #424754;
     --muted-foreground: #6f778e;
 
+    --background-surface: #F2F3FF;
+
     --danger: #ba1a1a;
     --danger-light: #FFDAD6;
+
+    --demo-label: #EAEDFF;
+    --background-profile: #D8E2FF;
+    --profile: #131B2E;
+
+
 }
 
 @theme {
     --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Geist Variable', sans-serif;
 
     --color-background: var(--background);
+    --color-background-secondary: var(--background-secondary);
     --color-border: var(--border);
+
     --color-primary: var(--primary);
     --color-primary-dark: var(--primary-dark);
+
     --color-foreground: var(--foreground);
     --color-muted-foreground: var(--muted-foreground);
 
+    --color-background-surface: var(--background-surface);
+
     --color-danger: var(--danger);
     --color-danger-light: var(--danger-light);
+
+    --color-demo-label: var(--demo-label);
+    --color-background-profile: var(--background-profile);
+    --color-text-profile: var(--profile);
 }
