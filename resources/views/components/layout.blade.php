@@ -6,7 +6,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <title>ShareDev</title>
     </head>
-    <body class="bg-background h-screen">
+    <body class="bg-background text-foreground h-screen">
         {{ $slot }}
     </body>
 </html>

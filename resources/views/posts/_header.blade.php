@@ -7,13 +7,13 @@
        <nav class="flex justify-between items-center px-6">
            <div class="flex gap-2.5 items-center">
                <a href="{{route('posts.index')}}" class="font-bold leading-7 tracking-tighter text-[20px] text-primary">DevShare</a>
-               <span class="inline-block px-2 py-0.5 text-[11px] text-primary font-display font-semibold -tracking-tight uppercase bg-demo-label rounded-full">Demo</span>
+               <span class="inline-block px-2 py-0.5 text-[11px] text-primary font-display font-semibold -tracking-tight uppercase bg-primary/20 rounded-full">Demo</span>
            </div>
 
            <div class="relative">
                <img src="{{asset('/icons/search_icon.svg')}}" alt="Search icon" class="absolute left-4 top-1/2 -translate-y-1/2" />
                <label>
-                   <input type="search" placeholder="Search tips, tool, code..." class="bg-background-surface h-9.25 pl-10 text-sm pr-4 py-2.5 w-md rounded-lg" />
+                   <input type="search" placeholder="Search tips, tool, code..." class="bg-background-surface text-foreground placeholder:text-muted-foreground h-9.25 pl-10 text-sm pr-4 py-2.5 w-md rounded-lg" />
                </label>
            </div>
 
@@ -24,7 +24,7 @@
                            Log in
                        </a>
 
-                       <a href="{{ route('register.create') }}" class="px-4 py-2 rounded-sm bg-primary text-background-secondary text-sm">
+                       <a href="{{ route('register.create') }}" class="px-4 py-2 rounded-sm bg-primary text-primary-dark text-sm">
                            Sign up
                        </a>
                    </div>
@@ -32,7 +32,7 @@
 
                @auth
                    <div class="flex items-center">
-                       <a href="{{ route('posts.create') }}" class="flex items-center mr-4 gap-1 text-sm font-semibold px-4 py-2 rounded-lg text-white bg-primary">
+                       <a href="{{ route('posts.create') }}" class="flex items-center mr-4 gap-1 text-sm font-semibold px-4 py-2 rounded-lg text-primary-dark bg-primary">
                            <img src="{{ asset('/icons/add-post_icon.svg') }}" alt="Add post icon" />
                            Post a Tip
                        </a>

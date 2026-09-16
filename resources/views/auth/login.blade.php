@@ -9,7 +9,7 @@
         </header>
 
         <main class="flex justify-center text-sm">
-            <div class="border border-border rounded-lg bg-white w-full max-w-105">
+            <div class="border border-border rounded-lg bg-background-secondary w-full max-w-105">
                 <div class="flex">
                     <a href="/login" class="py-4 inline-block flex-1 text-center rounded-tl-lg border-b-2 border-b-primary text-primary font-medium">Login</a>
                     <a href="/register"
@@ -33,14 +33,14 @@
 
                     <label class="flex flex-col mt-2">
                         <span class="mb-1">Email address</span>
-                        <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm" placeholder="dev@example.com" value="{{ old('email') }}" required/>
+                        <input type="email" name="email" class="px-4 pt-3 pb-3.5 border border-border rounded-sm bg-background-surface text-foreground placeholder:text-muted-foreground" placeholder="dev@example.com" value="{{ old('email') }}" required/>
                     </label>
 
                     <label class="flex flex-col mt-2">
                         <span class="mb-1">Password</span>
                         <input type="password"
                                name="password"
-                               class="px-4 pt-3 pb-3.5 border border-border rounded-sm @error('password') border-2 border-danger @enderror"
+                               class="px-4 pt-3 pb-3.5 border border-border rounded-sm bg-background-surface text-foreground placeholder:text-muted-foreground @error('password') border-2 border-danger @enderror"
                                placeholder="••••••••"
                                required />
                     </label>
@@ -51,7 +51,7 @@
                     </div>
                     @enderror
 
-                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-white bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer  items-center justify-center">
+                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-primary-dark bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer items-center justify-center">
                         Login
                         <img src="{{ asset('icons/login_icon.svg') }}" alt="Login icon" />
                     </button>

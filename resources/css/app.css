@@ -7,27 +7,49 @@
 @source '../../storage/framework/views/*.php';
 
 :root {
-    --background: #faf8ff;
-    --background-secondary: #FFFFFF;
-    --border: #c2c6d6;
+    --palette-base-100: oklch(30.857% 0.023 264.149);
+    --palette-base-200: oklch(28.036% 0.019 264.182);
+    --palette-base-300: oklch(26.346% 0.018 262.177);
+    --palette-base-content: oklch(82.901% 0.031 222.959);
+    --palette-primary: oklch(86.133% 0.141 139.549);
+    --palette-primary-content: oklch(17.226% 0.028 139.549);
+    --palette-secondary: oklch(73.375% 0.165 35.353);
+    --palette-secondary-content: oklch(14.675% 0.033 35.353);
+    --palette-accent: oklch(74.229% 0.133 311.379);
+    --palette-accent-content: oklch(14.845% 0.026 311.379);
+    --palette-neutral: oklch(24.731% 0.02 264.094);
+    --palette-neutral-content: oklch(82.901% 0.031 222.959);
+    --palette-info: oklch(86.078% 0.142 206.182);
+    --palette-info-content: oklch(17.215% 0.028 206.182);
+    --palette-success: oklch(86.171% 0.142 166.534);
+    --palette-success-content: oklch(17.234% 0.028 166.534);
+    --palette-warning: oklch(86.163% 0.142 94.818);
+    --palette-warning-content: oklch(17.232% 0.028 94.818);
+    --palette-error: oklch(82.418% 0.099 33.756);
+    --palette-error-content: oklch(16.483% 0.019 33.756);
 
-    --primary: #005ac2;
-    --primary-dark: #004395;
+    --background: var(--palette-base-100);
+    --background-secondary: var(--palette-base-200);
+    --background-surface: var(--palette-base-300);
+    --border: color-mix(in oklch, var(--palette-base-content) 28%, var(--palette-base-300));
+    --foreground: var(--palette-base-content);
+    --muted-foreground: color-mix(in oklch, var(--palette-base-content) 65%, var(--palette-base-100));
+    --primary: var(--palette-primary);
+    --primary-dark: var(--palette-primary-content);
+    --danger: var(--palette-error);
+    --danger-light: color-mix(in oklch, var(--palette-error) 25%, var(--palette-base-100));
+    --demo-label: var(--palette-accent-content);
+    --background-profile: var(--palette-accent);
+    --profile: var(--palette-accent-content);
+    --background-snippet: var(--palette-neutral);
 
-    --foreground: #424754;
-    --muted-foreground: #6f778e;
-
-    --background-surface: #F2F3FF;
-
-    --danger: #ba1a1a;
-    --danger-light: #FFDAD6;
-
-    --demo-label: #EAEDFF;
-    --background-profile: #D8E2FF;
-    --profile: #131B2E;
-
-    --background-snippet: #0F172A;
-
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --depth: 0;
+    --noise: 0;
 }
 
 @theme {
@@ -37,23 +59,17 @@
     --color-background: var(--background);
     --color-background-secondary: var(--background-secondary);
     --color-border: var(--border);
-
     --color-primary: var(--primary);
     --color-primary-dark: var(--primary-dark);
-
     --color-foreground: var(--foreground);
     --color-muted-foreground: var(--muted-foreground);
-
     --color-background-surface: var(--background-surface);
-
     --color-danger: var(--danger);
     --color-danger-light: var(--danger-light);
-
     --color-demo-label: var(--demo-label);
     --color-background-profile: var(--background-profile);
     --color-text-profile: var(--profile);
-
-    --color-background-snippets: var(--background-snippet)
+    --color-background-snippets: var(--background-snippet);
 }
 
 pre code.hljs {
