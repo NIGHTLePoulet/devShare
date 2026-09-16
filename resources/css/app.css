@@ -26,6 +26,7 @@
     --background-profile: #D8E2FF;
     --profile: #131B2E;
 
+    --background-snippet: #0F172A;
 
 }
 
@@ -51,4 +52,10 @@
     --color-demo-label: var(--demo-label);
     --color-background-profile: var(--background-profile);
     --color-text-profile: var(--profile);
+
+    --color-background-snippets: var(--background-snippet)
+}
+
+pre code.hljs {
+    background: var(--background-snippet);
 }

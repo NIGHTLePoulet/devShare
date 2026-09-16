@@ -2,6 +2,6 @@
     @include('posts._header')
 
     <main>
-        <p>Welcome to the post page</p>
+        <x-postCard />
     </main>
 </x-layout>
