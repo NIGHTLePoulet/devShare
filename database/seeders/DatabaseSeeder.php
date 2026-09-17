@@ -33,10 +33,14 @@ class DatabaseSeeder extends Seeder
         }
 
         foreach ($users as $user) {
-            PostVote::factory()->create([
-                'user_id' => $user->id,
-                'post_id' => Post::inRandomOrder()->first()->id,
-            ]);
+            $posts = Post::inRandomOrder()->take(rand(1, 5))->get();
+
+            foreach ($posts as $post) {
+                PostVote::factory()->create([
+                    'user_id' => $user->id,
+                    'post_id' => $post->id,
+                ]);
+            }
 
             CommentVote::factory()->create([
                 'user_id' => $user->id,
