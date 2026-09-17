@@ -51,7 +51,7 @@
                     <p class="text-danger text-xs -mt-2"> {{ $message }}</p>
                     @enderror
 
-                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-primary-dark bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer items-center justify-center">
+                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-primary-content bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer items-center justify-center">
                         Create account
                         <img src="{{ asset('icons/register_icon.svg') }}" alt="Register icon" />
                     </button>

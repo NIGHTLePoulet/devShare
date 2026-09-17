@@ -1,53 +1,58 @@
-<article>
+<article class="bg-background-surface flex p-6 gap-6 rounded-lg border border-border">
     <div>
-        <div>
-            <button>
+        <div class="flex flex-col w-8 h-14 justify-center items-center bg-background-secondary p-2 border border-border text-accent-content rounded-sm">
+            <button class="cursor-pointer text-muted-foreground p-0.5">
                 <x-icons.like_icon />
             </button>
 
-            <span>10</span>
+            <span class="text-[11px] font-bold leading-5 font-display text-white">10</span>
 
-            <button>
+            <button class="cursor-pointer text-muted-foreground p-0.5">
                 <x-icons.dislike_icon />
             </button>
         </div>
     </div>
 
     <section>
-        <div>
-            <p>React</p>
-            <p>Performance</p>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <p class="px-2 py-1 text-[11px] border border-border-foreground rounded-sm">React</p>
+                <p class="px-2 py-1 text-[11px] border border-border-foreground rounded-sm">Performance</p>
+            </div>
 
-            <div>
-                <div>
-                    US
-                </div>
-                <p>User</p>
+            <div class="flex items-center gap-2">
+                <p class="font-semibold text-xs text-border-foreground">User</p>
 
-                <span></span>
-
-                <p>2h ago</p>
+                <p class="text-xs text-muted-foreground">• nh ago</p>
             </div>
         </div>
 
-        <h3>Optimize Context Re-renders with useMemo</h3>
+        <h3 class="mt-2 font-display text-white font-bold text-[20px]">Optimize Context Re-renders with useMemo</h3>
 
-        <p>
+        <p class="mt-2 pt-2 text-muted-foreground text-sm">
             When using React Context for global state, passing an object literal directly to the value prop causes all consumers to re-render whenever the provider re-
             renders. Wrapping the value in useMemo prevents this issue.
         </p>
 
-        <pre>
-            <code>
-                function test () {
-                    console.log('test')
-                }
-            </code>
-        </pre>
+        <div class="border border-border px-4 pt-4 rounded-lg bg-snippet mt-4">
+            <div class="flex items-center justify-between text-[11px] pb-2 border-b border-b-border text-muted-foreground font-mono">
+               language
 
-        <div>
-            <img src="{{ asset('/icons/comment_icon.svg') }}" alt="Comment icon" />
-            n comments
+                <button class="flex items-center gap-2 text-[11px] text-muted-foreground font-mono">
+                    <x-icons.copy_icon />
+                    Copy
+                </button>
+            </div>
+            <pre class="m-0 w-full max-h-22.5 overflow-auto"><code class="text-[13px]">function test () {
+    console.log('test')
+}</code></pre>
+        </div>
+
+        <div class="flex justify-end mt-4 ">
+            <div class="flex items-center gap-2 text-[13px] text-foreground">
+                <x-icons.comment_icon />
+                n comments
+            </div>
         </div>
     </section>
 </article>

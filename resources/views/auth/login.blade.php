@@ -22,7 +22,7 @@
                     @csrf
 
                     @error('email')
-                    <div class="p-4 bg-danger-light/40 rounded-sm border border-danger/30">
+                    <div class="p-4 bg-danger-surface/40 rounded-sm border border-danger/30">
                         <div class="text-danger flex items-center gap-3 font-medium">
                             <img src="{{ asset('icons/wrong_icon_1.svg') }}" alt="Error icon" />
                             Authentication failed
@@ -51,7 +51,7 @@
                     </div>
                     @enderror
 
-                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-primary-dark bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer items-center justify-center">
+                    <button type="submit" data-test="register-button" class="text-[16px] font-medium flex gap-2.5 text-primary-content bg-primary rounded-sm mt-6 w-full h-13 cursor-pointer items-center justify-center">
                         Login
                         <img src="{{ asset('icons/login_icon.svg') }}" alt="Login icon" />
                     </button>

@@ -24,7 +24,7 @@
                            Log in
                        </a>
 
-                       <a href="{{ route('register.create') }}" class="px-4 py-2 rounded-sm bg-primary text-primary-dark text-sm">
+                       <a href="{{ route('register.create') }}" class="px-4 py-2 rounded-sm bg-primary text-primary-content text-sm">
                            Sign up
                        </a>
                    </div>
@@ -32,16 +32,16 @@
 
                @auth
                    <div class="flex items-center">
-                       <a href="{{ route('posts.create') }}" class="flex items-center mr-4 gap-1 text-sm font-semibold px-4 py-2 rounded-lg text-primary-dark bg-primary">
+                       <a href="{{ route('posts.create') }}" class="flex items-center mr-4 gap-1 text-sm font-semibold px-4 py-2 rounded-lg text-primary-content bg-primary">
                            <img src="{{ asset('/icons/add-post_icon.svg') }}" alt="Add post icon" />
                            Post a Tip
                        </a>
                        <div class="flex items-center gap-2 border-l border-l-border pl-2">
-                            <div class="size-8 py-2 text-xs bg-background-profile text-primary uppercase flex items-center justify-center rounded-xl">
+                            <div class="size-8 py-2 text-xs bg-profile text-primary uppercase flex items-center justify-center rounded-xl">
                                 {{ substr(Auth::user()->username, 0, 2) }}
                             </div>
 
-                           <span class="text-profile text-sm font-semibold">
+                           <span class="text-profile-content text-sm font-semibold">
                                {{ Auth::user()->username }}
                            </span>
 
